@@ -1,0 +1,19 @@
+{
+    "name": "ColdPhish",
+    "version": "1.0.0",
+    "description": "An extension to save you from phishing using Virustotal API and self-trained model",
+    "manifest_version": 2,
+    "background":{
+        "scripts":["background.js"],
+        "persistent":false
+
+    },
+    "content_scripts": [ {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      } ],
+
+    "permissions":[
+        "bookmarks", "tabs"
+    ]
+}
